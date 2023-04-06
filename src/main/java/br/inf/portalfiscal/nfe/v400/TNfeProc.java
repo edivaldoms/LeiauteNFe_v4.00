@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2017.09.19 às 05:21:26 PM BRT 
+// Gerado em: 2023.04.06 às 10:19:15 AM BRT 
 //
 
 
@@ -43,7 +43,6 @@ import javax.xml.bind.annotation.XmlType;
     "nFe",
     "protNFe"
 })
-//@XmlRootElement(name = "nfeProc") // EDIVALDO: adicionei esta anotação para evitar o exception: com.sun.istack.internal.SAXException2: não é possível fazer marshalling do tipo "br.inf.portalfiscal.nfe.v400.TNfeProc" como um elemento porque ele não foi encontrado em uma anotação @XmlRootElement
 public class TNfeProc {
 
     @XmlElement(name = "NFe", required = true)

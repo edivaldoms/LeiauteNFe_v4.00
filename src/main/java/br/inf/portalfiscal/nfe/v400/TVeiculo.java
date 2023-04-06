@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2017.09.19 às 05:21:26 PM BRT 
+// Gerado em: 2023.04.06 às 10:19:15 AM BRT 
 //
 
 
@@ -31,11 +31,11 @@ import javax.xml.bind.annotation.XmlType;
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *               &lt;whiteSpace value="preserve"/>
- *               &lt;pattern value="[A-Z]{2,3}[0-9]{4}|[A-Z]{3,4}[0-9]{3}"/>
+ *               &lt;pattern value="[A-Z]{2,3}[0-9]{4}|[A-Z]{3,4}[0-9]{3}|[A-Z0-9]{7}"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUf"/>
+ *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUf" minOccurs="0"/>
  *         &lt;element name="RNTC" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
@@ -62,7 +62,7 @@ public class TVeiculo {
 
     @XmlElement(required = true)
     protected String placa;
-    @XmlElement(name = "UF", required = true)
+    @XmlElement(name = "UF")
     @XmlSchemaType(name = "string")
     protected TUf uf;
     @XmlElement(name = "RNTC")

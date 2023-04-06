@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2017.09.19 às 05:21:26 PM BRT 
+// Gerado em: 2023.04.06 às 10:19:15 AM BRT 
 //
 
 
@@ -26,14 +26,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="clEnq" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *               &lt;minLength value="1"/>
- *               &lt;maxLength value="5"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
  *         &lt;element name="CNPJProd" type="{http://www.portalfiscal.inf.br/nfe}TCnpj" minOccurs="0"/>
  *         &lt;element name="cSelo" minOccurs="0">
  *           &lt;simpleType>
@@ -130,7 +122,6 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TIpi", propOrder = {
-    "clEnq",
     "cnpjProd",
     "cSelo",
     "qSelo",
@@ -140,7 +131,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TIpi {
 
-    protected String clEnq;
     @XmlElement(name = "CNPJProd")
     protected String cnpjProd;
     protected String cSelo;
@@ -151,30 +141,6 @@ public class TIpi {
     protected TIpi.IPITrib ipiTrib;
     @XmlElement(name = "IPINT")
     protected TIpi.IPINT ipint;
-
-    /**
-     * Obtém o valor da propriedade clEnq.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getClEnq() {
-        return clEnq;
-    }
-
-    /**
-     * Define o valor da propriedade clEnq.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setClEnq(String value) {
-        this.clEnq = value;
-    }
 
     /**
      * Obtém o valor da propriedade cnpjProd.

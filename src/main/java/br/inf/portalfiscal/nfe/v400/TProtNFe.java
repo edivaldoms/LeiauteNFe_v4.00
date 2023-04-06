@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2017.09.19 às 05:21:26 PM BRT 
+// Gerado em: 2023.04.06 às 10:19:15 AM BRT 
 //
 
 
@@ -45,6 +45,24 @@ import org.w3._2000._09.xmldsig_.SignatureType;
  *                   &lt;element name="digVal" type="{http://www.w3.org/2000/09/xmldsig#}DigestValueType" minOccurs="0"/>
  *                   &lt;element name="cStat" type="{http://www.portalfiscal.inf.br/nfe}TStat"/>
  *                   &lt;element name="xMotivo" type="{http://www.portalfiscal.inf.br/nfe}TMotivo"/>
+ *                   &lt;sequence minOccurs="0">
+ *                     &lt;element name="cMsg">
+ *                       &lt;simpleType>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                           &lt;whiteSpace value="preserve"/>
+ *                           &lt;pattern value="[0-9]{1,4}"/>
+ *                         &lt;/restriction>
+ *                       &lt;/simpleType>
+ *                     &lt;/element>
+ *                     &lt;element name="xMsg">
+ *                       &lt;simpleType>
+ *                         &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
+ *                           &lt;minLength value="1"/>
+ *                           &lt;maxLength value="200"/>
+ *                         &lt;/restriction>
+ *                       &lt;/simpleType>
+ *                     &lt;/element>
+ *                   &lt;/sequence>
  *                 &lt;/sequence>
  *                 &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
  *               &lt;/restriction>
@@ -166,6 +184,24 @@ public class TProtNFe {
      *         &lt;element name="digVal" type="{http://www.w3.org/2000/09/xmldsig#}DigestValueType" minOccurs="0"/>
      *         &lt;element name="cStat" type="{http://www.portalfiscal.inf.br/nfe}TStat"/>
      *         &lt;element name="xMotivo" type="{http://www.portalfiscal.inf.br/nfe}TMotivo"/>
+     *         &lt;sequence minOccurs="0">
+     *           &lt;element name="cMsg">
+     *             &lt;simpleType>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                 &lt;whiteSpace value="preserve"/>
+     *                 &lt;pattern value="[0-9]{1,4}"/>
+     *               &lt;/restriction>
+     *             &lt;/simpleType>
+     *           &lt;/element>
+     *           &lt;element name="xMsg">
+     *             &lt;simpleType>
+     *               &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
+     *                 &lt;minLength value="1"/>
+     *                 &lt;maxLength value="200"/>
+     *               &lt;/restriction>
+     *             &lt;/simpleType>
+     *           &lt;/element>
+     *         &lt;/sequence>
      *       &lt;/sequence>
      *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
      *     &lt;/restriction>
@@ -184,7 +220,9 @@ public class TProtNFe {
         "nProt",
         "digVal",
         "cStat",
-        "xMotivo"
+        "xMotivo",
+        "cMsg",
+        "xMsg"
     })
     public static class InfProt {
 
@@ -202,6 +240,8 @@ public class TProtNFe {
         protected String cStat;
         @XmlElement(required = true)
         protected String xMotivo;
+        protected String cMsg;
+        protected String xMsg;
         @XmlAttribute(name = "Id")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         @XmlID
@@ -396,6 +436,54 @@ public class TProtNFe {
          */
         public void setXMotivo(String value) {
             this.xMotivo = value;
+        }
+
+        /**
+         * Obtém o valor da propriedade cMsg.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getCMsg() {
+            return cMsg;
+        }
+
+        /**
+         * Define o valor da propriedade cMsg.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setCMsg(String value) {
+            this.cMsg = value;
+        }
+
+        /**
+         * Obtém o valor da propriedade xMsg.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getXMsg() {
+            return xMsg;
+        }
+
+        /**
+         * Define o valor da propriedade xMsg.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setXMsg(String value) {
+            this.xMsg = value;
         }
 
         /**
