@@ -1,0 +1,42 @@
+# https://www.schakko.de/2020/12/19/using-github-workflow-with-maven-dependencies-from-a-private-github-package-registry/
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# https://docs.github.com/en/free-pro-team@latest/rest/packages/packages?apiVersion=2022-11-28#delete-a-package-for-a-user
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      # Separa o nome do repositório em array pela '/' (arrIN) da variável GITHUB_REPOSITORY (owner/repo). Para funcionar, o nome do artifactId deve ser igual ao nome do repo.
+      - name: Delete a package for a user via REST API
+        run: |
+          IFS='/' read -r -a arrIN <<< $GITHUB_REPOSITORY
+          echo "${arrIN[1]}"
+          EVL_PACKAGE_NAME="br.com.evoli.${arrIN[1]}"
+          echo $EVL_PACKAGE_NAME
+          curl -L \
+          -X DELETE \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.GH_PAT_FOR_PACKAGES_ACTIONS_TOKEN }}" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          "https://api.github.com/users/edivaldoms/packages/maven/${EVL_PACKAGE_NAME}"
+      - name: Publish package
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_FOR_PACKAGES_ACTIONS_TOKEN }}

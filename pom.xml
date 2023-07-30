@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.inf.portalfiscal.nfe.v400</groupId>
-	<artifactId>LeiauteNFe_v4.00</artifactId>
+	
+	<groupId>br.com.evoli</groupId>
+	<artifactId>leiaute-nfe-v400-lib</artifactId>
 	<version>4.0</version>
 	<packaging>jar</packaging>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<githubuser>edivaldoms</githubuser>
+	</properties>
+	
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/${githubuser}/${project.artifactId}</url>
+		</repository>
+	</distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
@@ -12,6 +29,7 @@
 			<version>2.3.1</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -24,9 +42,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
-	</properties>
 </project>
