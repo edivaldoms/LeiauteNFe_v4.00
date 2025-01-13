@@ -1,5 +1,12 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.03.05 às 08:31:21 PM BRT 
+//
 
-package br.inf.portalfiscal.nfe.v400;
+
+package br.inf.portalfiscal.nfe;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,19 +16,19 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Pedido de Consulta do Recido do Lote de Notas Fiscais Eletrônicas
+ *  Tipo da NF-e processada
  * 
- * <p>Classe Java de TConsReciNFe complex type.
+ * <p>Classe Java de TNfeProc complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="TConsReciNFe">
+ * &lt;complexType name="TNfeProc">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="tpAmb" type="{http://www.portalfiscal.inf.br/nfe}TAmb"/>
- *         &lt;element name="nRec" type="{http://www.portalfiscal.inf.br/nfe}TRec"/>
+ *         &lt;element name="NFe" type="{http://www.portalfiscal.inf.br/nfe}TNFe"/>
+ *         &lt;element name="protNFe" type="{http://www.portalfiscal.inf.br/nfe}TProtNFe"/>
  *       &lt;/sequence>
  *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/nfe}TVerNFe" />
  *     &lt;/restriction>
@@ -32,65 +39,65 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TConsReciNFe", namespace = "http://www.portalfiscal.inf.br/nfe", propOrder = {
-    "tpAmb",
-    "nRec"
+@XmlType(name = "TNfeProc", propOrder = {
+    "nFe",
+    "protNFe"
 })
-public class TConsReciNFe {
+public class TNfeProc {
 
-    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
-    protected String tpAmb;
-    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
-    protected String nRec;
+    @XmlElement(name = "NFe", required = true)
+    protected TNFe nFe;
+    @XmlElement(required = true)
+    protected TProtNFe protNFe;
     @XmlAttribute(name = "versao", required = true)
     protected String versao;
 
     /**
-     * Obtém o valor da propriedade tpAmb.
+     * Obtém o valor da propriedade nFe.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TNFe }
      *     
      */
-    public String getTpAmb() {
-        return tpAmb;
+    public TNFe getNFe() {
+        return nFe;
     }
 
     /**
-     * Define o valor da propriedade tpAmb.
+     * Define o valor da propriedade nFe.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TNFe }
      *     
      */
-    public void setTpAmb(String value) {
-        this.tpAmb = value;
+    public void setNFe(TNFe value) {
+        this.nFe = value;
     }
 
     /**
-     * Obtém o valor da propriedade nRec.
+     * Obtém o valor da propriedade protNFe.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TProtNFe }
      *     
      */
-    public String getNRec() {
-        return nRec;
+    public TProtNFe getProtNFe() {
+        return protNFe;
     }
 
     /**
-     * Define o valor da propriedade nRec.
+     * Define o valor da propriedade protNFe.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TProtNFe }
      *     
      */
-    public void setNRec(String value) {
-        this.nRec = value;
+    public void setProtNFe(TProtNFe value) {
+        this.protNFe = value;
     }
 
     /**

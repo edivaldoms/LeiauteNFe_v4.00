@@ -1,5 +1,12 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.03.05 às 08:31:21 PM BRT 
+//
 
-package br.inf.portalfiscal.nfe.v400;
+
+package br.inf.portalfiscal.nfe;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,14 +16,14 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Dados do Endereço do Emitente  // 24/10/08 - desmembrado / tamanho mínimo
+ * Tipo Dados do Endereço  // 24/10/08 - tamanho mínimo
  * 
- * <p>Classe Java de TEnderEmi complex type.
+ * <p>Classe Java de TEndereco complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="TEnderEmi">
+ * &lt;complexType name="TEndereco">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -61,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUfEmi"/>
- *         &lt;element name="CEP">
+ *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUf"/>
+ *         &lt;element name="CEP" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *               &lt;whiteSpace value="preserve"/>
@@ -72,16 +79,17 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;/element>
  *         &lt;element name="cPais" minOccurs="0">
  *           &lt;simpleType>
- *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *               &lt;enumeration value="1058"/>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;whiteSpace value="preserve"/>
+ *               &lt;pattern value="[0-9]{1,4}"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="xPais" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *               &lt;enumeration value="Brasil"/>
- *               &lt;enumeration value="BRASIL"/>
+ *               &lt;maxLength value="60"/>
+ *               &lt;minLength value="2"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
@@ -102,7 +110,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TEnderEmi", propOrder = {
+@XmlType(name = "TEndereco", propOrder = {
     "xLgr",
     "nro",
     "xCpl",
@@ -115,7 +123,7 @@ import javax.xml.bind.annotation.XmlType;
     "xPais",
     "fone"
 })
-public class TEnderEmi {
+public class TEndereco {
 
     @XmlElement(required = true)
     protected String xLgr;
@@ -130,8 +138,8 @@ public class TEnderEmi {
     protected String xMun;
     @XmlElement(name = "UF", required = true)
     @XmlSchemaType(name = "string")
-    protected TUfEmi uf;
-    @XmlElement(name = "CEP", required = true)
+    protected TUf uf;
+    @XmlElement(name = "CEP")
     protected String cep;
     protected String cPais;
     protected String xPais;
@@ -286,10 +294,10 @@ public class TEnderEmi {
      * 
      * @return
      *     possible object is
-     *     {@link TUfEmi }
+     *     {@link TUf }
      *     
      */
-    public TUfEmi getUF() {
+    public TUf getUF() {
         return uf;
     }
 
@@ -298,10 +306,10 @@ public class TEnderEmi {
      * 
      * @param value
      *     allowed object is
-     *     {@link TUfEmi }
+     *     {@link TUf }
      *     
      */
-    public void setUF(TUfEmi value) {
+    public void setUF(TUf value) {
         this.uf = value;
     }
 

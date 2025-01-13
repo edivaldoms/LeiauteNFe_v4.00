@@ -1,5 +1,12 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.03.05 às 08:31:21 PM BRT 
+//
 
-package br.inf.portalfiscal.nfe.v400;
+
+package br.inf.portalfiscal.nfe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -582,26 +589,18 @@ import org.w3._2000._09.xmldsig_.SignatureType;
  *                                           &lt;/restriction>
  *                                         &lt;/simpleType>
  *                                       &lt;/element>
- *                                       &lt;element name="gCred" maxOccurs="4" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="cCredPresumido">
- *                                                   &lt;simpleType>
- *                                                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                                       &lt;whiteSpace value="preserve"/>
- *                                                       &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
- *                                                     &lt;/restriction>
- *                                                   &lt;/simpleType>
- *                                                 &lt;/element>
- *                                                 &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
- *                                                 &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
- *                                               &lt;/sequence>
+ *                                       &lt;sequence maxOccurs="4" minOccurs="0">
+ *                                         &lt;element name="cCredPresumido">
+ *                                           &lt;simpleType>
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                               &lt;whiteSpace value="preserve"/>
+ *                                               &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
  *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
+ *                                           &lt;/simpleType>
+ *                                         &lt;/element>
+ *                                         &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
+ *                                         &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
+ *                                       &lt;/sequence>
  *                                       &lt;element name="EXTIPI" minOccurs="0">
  *                                         &lt;simpleType>
  *                                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -3674,16 +3673,15 @@ import org.w3._2000._09.xmldsig_.SignatureType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TNFe", namespace = "http://www.portalfiscal.inf.br/nfe", propOrder = {
+@XmlType(name = "TNFe", propOrder = {
     "infNFe",
     "infNFeSupl",
     "signature"
 })
 public class TNFe {
 
-    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+    @XmlElement(required = true)
     protected TNFe.InfNFe infNFe;
-    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
     protected TNFe.InfNFeSupl infNFeSupl;
     @XmlElement(name = "Signature", namespace = "http://www.w3.org/2000/09/xmldsig#", required = true)
     protected SignatureType signature;
@@ -4318,26 +4316,18 @@ public class TNFe {
      *                                 &lt;/restriction>
      *                               &lt;/simpleType>
      *                             &lt;/element>
-     *                             &lt;element name="gCred" maxOccurs="4" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="cCredPresumido">
-     *                                         &lt;simpleType>
-     *                                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                                             &lt;whiteSpace value="preserve"/>
-     *                                             &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
-     *                                           &lt;/restriction>
-     *                                         &lt;/simpleType>
-     *                                       &lt;/element>
-     *                                       &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
-     *                                       &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
-     *                                     &lt;/sequence>
+     *                             &lt;sequence maxOccurs="4" minOccurs="0">
+     *                               &lt;element name="cCredPresumido">
+     *                                 &lt;simpleType>
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                                     &lt;whiteSpace value="preserve"/>
+     *                                     &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
      *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
+     *                                 &lt;/simpleType>
+     *                               &lt;/element>
+     *                               &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
+     *                               &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
+     *                             &lt;/sequence>
      *                             &lt;element name="EXTIPI" minOccurs="0">
      *                               &lt;simpleType>
      *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -7399,43 +7389,30 @@ public class TNFe {
     })
     public static class InfNFe {
 
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected TNFe.InfNFe.Ide ide;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected TNFe.InfNFe.Emit emit;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Avulsa avulsa;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Dest dest;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TLocal retirada;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TLocal entrega;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected List<TNFe.InfNFe.AutXML> autXML;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected List<TNFe.InfNFe.Det> det;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected TNFe.InfNFe.Total total;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected TNFe.InfNFe.Transp transp;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Cobr cobr;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected TNFe.InfNFe.Pag pag;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.InfIntermed infIntermed;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.InfAdic infAdic;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Exporta exporta;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Compra compra;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.Cana cana;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TInfRespTec infRespTec;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
         protected TNFe.InfNFe.InfSolicNFF infSolicNFF;
         @XmlAttribute(name = "versao", required = true)
         protected String versao;
@@ -7986,9 +7963,9 @@ public class TNFe {
         })
         public static class AutXML {
 
-            @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CNPJ")
             protected String cnpj;
-            @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CPF")
             protected String cpf;
 
             /**
@@ -8129,28 +8106,25 @@ public class TNFe {
         })
         public static class Avulsa {
 
-            @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "CNPJ", required = true)
             protected String cnpj;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String xOrgao;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String matr;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String xAgente;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String fone;
-            @XmlElement(name = "UF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "UF", required = true)
             @XmlSchemaType(name = "string")
             protected TUfEmi uf;
-            @XmlElement(name = "nDAR", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "nDAR")
             protected String ndar;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String dEmi;
-            @XmlElement(name = "vDAR", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "vDAR")
             protected String vdar;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String repEmi;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String dPag;
 
             /**
@@ -8513,25 +8487,24 @@ public class TNFe {
         })
         public static class Cana {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String safra;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String ref;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected List<TNFe.InfNFe.Cana.ForDia> forDia;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String qTotMes;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String qTotAnt;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String qTotGer;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.Cana.Deduc> deduc;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String vFor;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String vTotDed;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String vLiqFor;
 
             /**
@@ -8819,9 +8792,9 @@ public class TNFe {
             })
             public static class Deduc {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String xDed;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vDed;
 
                 /**
@@ -8908,7 +8881,7 @@ public class TNFe {
             })
             public static class ForDia {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String qtde;
                 @XmlAttribute(name = "dia", required = true)
                 protected String dia;
@@ -9032,9 +9005,7 @@ public class TNFe {
         })
         public static class Cobr {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Cobr.Fat fat;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.Cobr.Dup> dup;
 
             /**
@@ -9127,11 +9098,9 @@ public class TNFe {
             })
             public static class Dup {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String nDup;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String dVenc;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vDup;
 
                 /**
@@ -9247,13 +9216,9 @@ public class TNFe {
             })
             public static class Fat {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String nFat;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vOrig;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vDesc;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vLiq;
 
                 /**
@@ -9407,11 +9372,9 @@ public class TNFe {
         })
         public static class Compra {
 
-            @XmlElement(name = "xNEmp", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "xNEmp")
             protected String xnEmp;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xPed;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xCont;
 
             /**
@@ -9579,25 +9542,21 @@ public class TNFe {
         })
         public static class Dest {
 
-            @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CNPJ")
             protected String cnpj;
-            @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CPF")
             protected String cpf;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String idEstrangeiro;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xNome;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TEndereco enderDest;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String indIEDest;
-            @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "IE")
             protected String ie;
-            @XmlElement(name = "ISUF", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "ISUF")
             protected String isuf;
-            @XmlElement(name = "IM", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "IM")
             protected String im;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String email;
 
             /**
@@ -9933,26 +9892,18 @@ public class TNFe {
          *                       &lt;/restriction>
          *                     &lt;/simpleType>
          *                   &lt;/element>
-         *                   &lt;element name="gCred" maxOccurs="4" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="cCredPresumido">
-         *                               &lt;simpleType>
-         *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *                                   &lt;whiteSpace value="preserve"/>
-         *                                   &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
-         *                                 &lt;/restriction>
-         *                               &lt;/simpleType>
-         *                             &lt;/element>
-         *                             &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
-         *                             &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
-         *                           &lt;/sequence>
+         *                   &lt;sequence maxOccurs="4" minOccurs="0">
+         *                     &lt;element name="cCredPresumido">
+         *                       &lt;simpleType>
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *                           &lt;whiteSpace value="preserve"/>
+         *                           &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
          *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
+         *                       &lt;/simpleType>
+         *                     &lt;/element>
+         *                     &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
+         *                     &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
+         *                   &lt;/sequence>
          *                   &lt;element name="EXTIPI" minOccurs="0">
          *                     &lt;simpleType>
          *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -12279,15 +12230,12 @@ public class TNFe {
         })
         public static class Det {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected TNFe.InfNFe.Det.Prod prod;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected TNFe.InfNFe.Det.Imposto imposto;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Det.ImpostoDevol impostoDevol;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String infAdProd;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Det.ObsItem obsItem;
             @XmlAttribute(name = "nItem", required = true)
             protected String nItem;
@@ -13929,16 +13877,16 @@ public class TNFe {
             public static class Imposto {
 
                 @XmlElementRefs({
+                    @XmlElementRef(name = "COFINSST", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "PIS", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
                     @XmlElementRef(name = "IPI", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "PISST", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "COFINS", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "vTotTrib", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "ICMSUFDest", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
                     @XmlElementRef(name = "ICMS", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
                     @XmlElementRef(name = "II", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "COFINS", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "ISSQN", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "PIS", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "COFINSST", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "ICMSUFDest", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
-                    @XmlElementRef(name = "vTotTrib", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "PISST", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "ISSQN", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false)
                 })
                 protected List<JAXBElement<?>> content;
 
@@ -13948,8 +13896,8 @@ public class TNFe {
                  * <p>
                  * Você está obtendo esta propriedade "catch-all" pelo seguinte motivo: 
                  * O nome do campo "IPI" é usado por duas partes diferentes de um esquema. Consulte: 
-                 * linha 4281 de file:/D:/TRABALHO/NFE/Esquemas%20XML/PL_009n_NT2023_004_v101_e_NT2019_001_v162/leiauteNFe_v4.00.xsd
-                 * linha 4249 de file:/D:/TRABALHO/NFE/Esquemas%20XML/PL_009n_NT2023_004_v101_e_NT2019_001_v162/leiauteNFe_v4.00.xsd
+                 * linha 4274 de file:/D:/TRABALHO/NFE/Esquemas%20XML/PL_009m_NT2023_004_v101_e_NT2019_001_v160/leiauteNFe_v4.00.xsd
+                 * linha 4242 de file:/D:/TRABALHO/NFE/Esquemas%20XML/PL_009m_NT2023_004_v101_e_NT2019_001_v160/leiauteNFe_v4.00.xsd
                  * <p>
                  * Para eliminar esta propriedade, aplique uma personalização de propriedade a uma 
                  * das seguintes declarações, a fim de alterar seus nomes: 
@@ -13970,16 +13918,16 @@ public class TNFe {
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
+                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.COFINSST }{@code >}
+                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.PIS }{@code >}
                  * {@link JAXBElement }{@code <}{@link TIpi }{@code >}
-                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.PISST }{@code >}
+                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.COFINS }{@code >}
+                 * {@link JAXBElement }{@code <}{@link String }{@code >}
+                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.ICMSUFDest }{@code >}
                  * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.ICMS }{@code >}
                  * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.II }{@code >}
-                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.COFINS }{@code >}
+                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.PISST }{@code >}
                  * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.ISSQN }{@code >}
-                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.PIS }{@code >}
-                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.COFINSST }{@code >}
-                 * {@link JAXBElement }{@code <}{@link TNFe.InfNFe.Det.Imposto.ICMSUFDest }{@code >}
-                 * {@link JAXBElement }{@code <}{@link String }{@code >}
                  * 
                  * 
                  */
@@ -14135,13 +14083,13 @@ public class TNFe {
                 })
                 public static class COFINS {
 
-                    @XmlElement(name = "COFINSAliq", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "COFINSAliq")
                     protected TNFe.InfNFe.Det.Imposto.COFINS.COFINSAliq cofinsAliq;
-                    @XmlElement(name = "COFINSQtde", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "COFINSQtde")
                     protected TNFe.InfNFe.Det.Imposto.COFINS.COFINSQtde cofinsQtde;
-                    @XmlElement(name = "COFINSNT", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "COFINSNT")
                     protected TNFe.InfNFe.Det.Imposto.COFINS.COFINSNT cofinsnt;
-                    @XmlElement(name = "COFINSOutr", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "COFINSOutr")
                     protected TNFe.InfNFe.Det.Imposto.COFINS.COFINSOutr cofinsOutr;
 
                     /**
@@ -14280,13 +14228,13 @@ public class TNFe {
                     })
                     public static class COFINSAliq {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pCOFINS", required = true)
                         protected String pcofins;
-                        @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vCOFINS", required = true)
                         protected String vcofins;
 
                         /**
@@ -14425,7 +14373,7 @@ public class TNFe {
                     })
                     public static class COFINSNT {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
 
                         /**
@@ -14526,17 +14474,16 @@ public class TNFe {
                     })
                     public static class COFINSOutr {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBC")
                         protected String vbc;
-                        @XmlElement(name = "pCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pCOFINS")
                         protected String pcofins;
-                        @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCProd")
                         protected String qbcProd;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String vAliqProd;
-                        @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vCOFINS", required = true)
                         protected String vcofins;
 
                         /**
@@ -14723,13 +14670,13 @@ public class TNFe {
                     })
                     public static class COFINSQtde {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "qBCProd", required = true)
                         protected String qbcProd;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vAliqProd;
-                        @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vCOFINS", required = true)
                         protected String vcofins;
 
                         /**
@@ -14882,17 +14829,15 @@ public class TNFe {
                 })
                 public static class COFINSST {
 
-                    @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vBC")
                     protected String vbc;
-                    @XmlElement(name = "pCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pCOFINS")
                     protected String pcofins;
-                    @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "qBCProd")
                     protected String qbcProd;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vAliqProd;
-                    @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vCOFINS", required = true)
                     protected String vcofins;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String indSomaCOFINSST;
 
                     /**
@@ -16107,47 +16052,47 @@ public class TNFe {
                 })
                 public static class ICMS {
 
-                    @XmlElement(name = "ICMS00", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS00")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS00 icms00;
-                    @XmlElement(name = "ICMS02", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS02")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS02 icms02;
-                    @XmlElement(name = "ICMS10", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS10")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS10 icms10;
-                    @XmlElement(name = "ICMS15", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS15")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS15 icms15;
-                    @XmlElement(name = "ICMS20", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS20")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS20 icms20;
-                    @XmlElement(name = "ICMS30", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS30")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS30 icms30;
-                    @XmlElement(name = "ICMS40", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS40")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS40 icms40;
-                    @XmlElement(name = "ICMS51", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS51")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS51 icms51;
-                    @XmlElement(name = "ICMS53", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS53")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS53 icms53;
-                    @XmlElement(name = "ICMS60", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS60")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS60 icms60;
-                    @XmlElement(name = "ICMS61", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS61")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS61 icms61;
-                    @XmlElement(name = "ICMS70", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS70")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS70 icms70;
-                    @XmlElement(name = "ICMS90", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMS90")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMS90 icms90;
-                    @XmlElement(name = "ICMSPart", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSPart")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSPart icmsPart;
-                    @XmlElement(name = "ICMSST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSST")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSST icmsst;
-                    @XmlElement(name = "ICMSSN101", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN101")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN101 icmssn101;
-                    @XmlElement(name = "ICMSSN102", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN102")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN102 icmssn102;
-                    @XmlElement(name = "ICMSSN201", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN201")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN201 icmssn201;
-                    @XmlElement(name = "ICMSSN202", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN202")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN202 icmssn202;
-                    @XmlElement(name = "ICMSSN500", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN500")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN500 icmssn500;
-                    @XmlElement(name = "ICMSSN900", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "ICMSSN900")
                     protected TNFe.InfNFe.Det.Imposto.ICMS.ICMSSN900 icmssn900;
 
                     /**
@@ -16713,21 +16658,21 @@ public class TNFe {
                     })
                     public static class ICMS00 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMS", required = true)
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMS", required = true)
                         protected String vicms;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
 
                         /**
@@ -16965,15 +16910,15 @@ public class TNFe {
                     })
                     public static class ICMS02 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMono")
                         protected String qbcMono;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String adRemICMS;
-                        @XmlElement(name = "vICMSMono", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSMono", required = true)
                         protected String vicmsMono;
 
                         /**
@@ -17207,45 +17152,43 @@ public class TNFe {
                     })
                     public static class ICMS10 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMS", required = true)
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMS", required = true)
                         protected String vicms;
-                        @XmlElement(name = "vBCFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCP")
                         protected String vbcfcp;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(name = "vICMSSTDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSTDeson")
                         protected String vicmsstDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMSST;
 
                         /**
@@ -17791,25 +17734,23 @@ public class TNFe {
                     })
                     public static class ICMS15 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMono")
                         protected String qbcMono;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String adRemICMS;
-                        @XmlElement(name = "vICMSMono", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSMono", required = true)
                         protected String vicmsMono;
-                        @XmlElement(name = "qBCMonoReten", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMonoReten")
                         protected String qbcMonoReten;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String adRemICMSReten;
-                        @XmlElement(name = "vICMSMonoReten", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSMonoReten", required = true)
                         protected String vicmsMonoReten;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedAdRem;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motRedAdRem;
 
                         /**
@@ -18142,31 +18083,29 @@ public class TNFe {
                     })
                     public static class ICMS20 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBC;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String pRedBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMS", required = true)
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMS", required = true)
                         protected String vicms;
-                        @XmlElement(name = "vBCFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCP")
                         protected String vbcfcp;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
-                        @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDeson")
                         protected String vicmsDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMS;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String indDeduzDeson;
 
                         /**
@@ -18576,33 +18515,30 @@ public class TNFe {
                     })
                     public static class ICMS30 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDeson")
                         protected String vicmsDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMS;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String indDeduzDeson;
 
                         /**
@@ -19014,15 +18950,13 @@ public class TNFe {
                     })
                     public static class ICMS40 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDeson")
                         protected String vicmsDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMS;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String indDeduzDeson;
 
                         /**
@@ -19233,39 +19167,35 @@ public class TNFe {
                     })
                     public static class ICMS51 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String modBC;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBC;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String cBenefRBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBC")
                         protected String vbc;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMS")
                         protected String picms;
-                        @XmlElement(name = "vICMSOp", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSOp")
                         protected String vicmsOp;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pDif;
-                        @XmlElement(name = "vICMSDif", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDif")
                         protected String vicmsDif;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMS")
                         protected String vicms;
-                        @XmlElement(name = "vBCFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCP")
                         protected String vbcfcp;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
-                        @XmlElement(name = "pFCPDif", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPDif")
                         protected String pfcpDif;
-                        @XmlElement(name = "vFCPDif", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPDif")
                         protected String vfcpDif;
-                        @XmlElement(name = "vFCPEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPEfet")
                         protected String vfcpEfet;
 
                         /**
@@ -19729,25 +19659,22 @@ public class TNFe {
                     })
                     public static class ICMS53 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMono")
                         protected String qbcMono;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String adRemICMS;
-                        @XmlElement(name = "vICMSMonoOp", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSMonoOp")
                         protected String vicmsMonoOp;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pDif;
-                        @XmlElement(name = "vICMSMonoDif", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSMonoDif")
                         protected String vicmsMonoDif;
-                        @XmlElement(name = "vICMSMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSMono")
                         protected String vicmsMono;
-                        @XmlElement(name = "qBCMonoDif", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMonoDif")
                         protected String qbcMonoDif;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String adRemICMSDif;
 
                         /**
@@ -20055,31 +19982,30 @@ public class TNFe {
                     })
                     public static class ICMS60 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBCSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCSTRet")
                         protected String vbcstRet;
-                        @XmlElement(name = "pST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pST")
                         protected String pst;
-                        @XmlElement(name = "vICMSSubstituto", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSubstituto")
                         protected String vicmsSubstituto;
-                        @XmlElement(name = "vICMSSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSTRet")
                         protected String vicmsstRet;
-                        @XmlElement(name = "vBCFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPSTRet")
                         protected String vbcfcpstRet;
-                        @XmlElement(name = "pFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPSTRet")
                         protected String pfcpstRet;
-                        @XmlElement(name = "vFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPSTRet")
                         protected String vfcpstRet;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCEfet;
-                        @XmlElement(name = "vBCEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCEfet")
                         protected String vbcEfet;
-                        @XmlElement(name = "pICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMSEfet")
                         protected String picmsEfet;
-                        @XmlElement(name = "vICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSEfet")
                         protected String vicmsEfet;
 
                         /**
@@ -20437,15 +20363,15 @@ public class TNFe {
                     })
                     public static class ICMS61 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCMonoRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCMonoRet")
                         protected String qbcMonoRet;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String adRemICMSRet;
-                        @XmlElement(name = "vICMSMonoRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSMonoRet", required = true)
                         protected String vicmsMonoRet;
 
                         /**
@@ -20706,53 +20632,49 @@ public class TNFe {
                     })
                     public static class ICMS70 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBC;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String pRedBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMS", required = true)
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMS", required = true)
                         protected String vicms;
-                        @XmlElement(name = "vBCFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCP")
                         protected String vbcfcp;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDeson")
                         protected String vicmsDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMS;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String indDeduzDeson;
-                        @XmlElement(name = "vICMSSTDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSTDeson")
                         protected String vicmsstDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMSST;
 
                         /**
@@ -21473,53 +21395,46 @@ public class TNFe {
                     })
                     public static class ICMS90 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String modBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBC")
                         protected String vbc;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBC;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMS")
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMS")
                         protected String vicms;
-                        @XmlElement(name = "vBCFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCP")
                         protected String vbcfcp;
-                        @XmlElement(name = "pFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCP")
                         protected String pfcp;
-                        @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCP")
                         protected String vfcp;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCST")
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMSST")
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSST")
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSDeson")
                         protected String vicmsDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMS;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String indDeduzDeson;
-                        @XmlElement(name = "vICMSSTDeson", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSTDeson")
                         protected String vicmsstDeson;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String motDesICMSST;
 
                         /**
@@ -22193,41 +22108,39 @@ public class TNFe {
                     })
                     public static class ICMSPart {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBC;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMS", required = true)
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMS", required = true)
                         protected String vicms;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(name = "pBCOp", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pBCOp", required = true)
                         protected String pbcOp;
-                        @XmlElement(name = "UFST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "UFST", required = true)
                         @XmlSchemaType(name = "string")
                         protected TUf ufst;
 
@@ -22704,13 +22617,13 @@ public class TNFe {
                     })
                     public static class ICMSSN101 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String pCredSN;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vCredICMSSN;
 
                         /**
@@ -22849,9 +22762,9 @@ public class TNFe {
                     })
                     public static class ICMSSN102 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
 
                         /**
@@ -22976,31 +22889,30 @@ public class TNFe {
                     })
                     public static class ICMSSN201 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String pCredSN;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vCredICMSSN;
 
                         /**
@@ -23386,27 +23298,26 @@ public class TNFe {
                     })
                     public static class ICMSSN202 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCST", required = true)
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pICMSST", required = true)
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSST", required = true)
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
 
                         /**
@@ -23738,31 +23649,30 @@ public class TNFe {
                     })
                     public static class ICMSSN500 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
-                        @XmlElement(name = "vBCSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCSTRet")
                         protected String vbcstRet;
-                        @XmlElement(name = "pST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pST")
                         protected String pst;
-                        @XmlElement(name = "vICMSSubstituto", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSubstituto")
                         protected String vicmsSubstituto;
-                        @XmlElement(name = "vICMSSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSTRet")
                         protected String vicmsstRet;
-                        @XmlElement(name = "vBCFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPSTRet")
                         protected String vbcfcpstRet;
-                        @XmlElement(name = "pFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPSTRet")
                         protected String pfcpstRet;
-                        @XmlElement(name = "vFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPSTRet")
                         protected String vfcpstRet;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCEfet;
-                        @XmlElement(name = "vBCEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCEfet")
                         protected String vbcEfet;
-                        @XmlElement(name = "pICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMSEfet")
                         protected String picmsEfet;
-                        @XmlElement(name = "vICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSEfet")
                         protected String vicmsEfet;
 
                         /**
@@ -24177,41 +24087,35 @@ public class TNFe {
                     })
                     public static class ICMSSN900 {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CSOSN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CSOSN", required = true)
                         protected String csosn;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String modBC;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBC")
                         protected String vbc;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBC;
-                        @XmlElement(name = "pICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMS")
                         protected String picms;
-                        @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMS")
                         protected String vicms;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String modBCST;
-                        @XmlElement(name = "pMVAST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pMVAST")
                         protected String pmvast;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCST;
-                        @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCST")
                         protected String vbcst;
-                        @XmlElement(name = "pICMSST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMSST")
                         protected String picmsst;
-                        @XmlElement(name = "vICMSST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSST")
                         protected String vicmsst;
-                        @XmlElement(name = "vBCFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPST")
                         protected String vbcfcpst;
-                        @XmlElement(name = "pFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPST")
                         protected String pfcpst;
-                        @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPST")
                         protected String vfcpst;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pCredSN;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String vCredICMSSN;
 
                         /**
@@ -24714,35 +24618,34 @@ public class TNFe {
                     })
                     public static class ICMSST {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String orig;
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBCSTRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCSTRet", required = true)
                         protected String vbcstRet;
-                        @XmlElement(name = "pST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pST")
                         protected String pst;
-                        @XmlElement(name = "vICMSSubstituto", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSSubstituto")
                         protected String vicmsSubstituto;
-                        @XmlElement(name = "vICMSSTRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSSTRet", required = true)
                         protected String vicmsstRet;
-                        @XmlElement(name = "vBCFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCFCPSTRet")
                         protected String vbcfcpstRet;
-                        @XmlElement(name = "pFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pFCPSTRet")
                         protected String pfcpstRet;
-                        @XmlElement(name = "vFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vFCPSTRet")
                         protected String vfcpstRet;
-                        @XmlElement(name = "vBCSTDest", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBCSTDest", required = true)
                         protected String vbcstDest;
-                        @XmlElement(name = "vICMSSTDest", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vICMSSTDest", required = true)
                         protected String vicmsstDest;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String pRedBCEfet;
-                        @XmlElement(name = "vBCEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBCEfet")
                         protected String vbcEfet;
-                        @XmlElement(name = "pICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pICMSEfet")
                         protected String picmsEfet;
-                        @XmlElement(name = "vICMSEfet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vICMSEfet")
                         protected String vicmsEfet;
 
                         /**
@@ -25160,23 +25063,23 @@ public class TNFe {
                 })
                 public static class ICMSUFDest {
 
-                    @XmlElement(name = "vBCUFDest", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vBCUFDest", required = true)
                     protected String vbcufDest;
-                    @XmlElement(name = "vBCFCPUFDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vBCFCPUFDest")
                     protected String vbcfcpufDest;
-                    @XmlElement(name = "pFCPUFDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pFCPUFDest")
                     protected String pfcpufDest;
-                    @XmlElement(name = "pICMSUFDest", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "pICMSUFDest", required = true)
                     protected String picmsufDest;
-                    @XmlElement(name = "pICMSInter", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "pICMSInter", required = true)
                     protected String picmsInter;
-                    @XmlElement(name = "pICMSInterPart", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "pICMSInterPart", required = true)
                     protected String picmsInterPart;
-                    @XmlElement(name = "vFCPUFDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vFCPUFDest")
                     protected String vfcpufDest;
-                    @XmlElement(name = "vICMSUFDest", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vICMSUFDest", required = true)
                     protected String vicmsufDest;
-                    @XmlElement(name = "vICMSUFRemet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vICMSUFRemet", required = true)
                     protected String vicmsufRemet;
 
                     /**
@@ -25429,13 +25332,13 @@ public class TNFe {
                 })
                 public static class II {
 
-                    @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vBC", required = true)
                     protected String vbc;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String vDespAdu;
-                    @XmlElement(name = "vII", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vII", required = true)
                     protected String vii;
-                    @XmlElement(name = "vIOF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vIOF", required = true)
                     protected String viof;
 
                     /**
@@ -25636,37 +25539,29 @@ public class TNFe {
                 })
                 public static class ISSQN {
 
-                    @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vBC", required = true)
                     protected String vbc;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String vAliq;
-                    @XmlElement(name = "vISSQN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vISSQN", required = true)
                     protected String vissqn;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cMunFG;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cListServ;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vDeducao;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vOutro;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vDescIncond;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vDescCond;
-                    @XmlElement(name = "vISSRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vISSRet")
                     protected String vissRet;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String indISS;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String cServico;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String cMun;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String cPais;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String nProcesso;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String indIncentivo;
 
                     /**
@@ -26201,13 +26096,13 @@ public class TNFe {
                 })
                 public static class PIS {
 
-                    @XmlElement(name = "PISAliq", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "PISAliq")
                     protected TNFe.InfNFe.Det.Imposto.PIS.PISAliq pisAliq;
-                    @XmlElement(name = "PISQtde", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "PISQtde")
                     protected TNFe.InfNFe.Det.Imposto.PIS.PISQtde pisQtde;
-                    @XmlElement(name = "PISNT", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "PISNT")
                     protected TNFe.InfNFe.Det.Imposto.PIS.PISNT pisnt;
-                    @XmlElement(name = "PISOutr", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "PISOutr")
                     protected TNFe.InfNFe.Det.Imposto.PIS.PISOutr pisOutr;
 
                     /**
@@ -26346,13 +26241,13 @@ public class TNFe {
                     })
                     public static class PISAliq {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vBC", required = true)
                         protected String vbc;
-                        @XmlElement(name = "pPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "pPIS", required = true)
                         protected String ppis;
-                        @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vPIS", required = true)
                         protected String vpis;
 
                         /**
@@ -26491,7 +26386,7 @@ public class TNFe {
                     })
                     public static class PISNT {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
 
                         /**
@@ -26592,17 +26487,16 @@ public class TNFe {
                     })
                     public static class PISOutr {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "vBC")
                         protected String vbc;
-                        @XmlElement(name = "pPIS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "pPIS")
                         protected String ppis;
-                        @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+                        @XmlElement(name = "qBCProd")
                         protected String qbcProd;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String vAliqProd;
-                        @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vPIS", required = true)
                         protected String vpis;
 
                         /**
@@ -26790,13 +26684,13 @@ public class TNFe {
                     })
                     public static class PISQtde {
 
-                        @XmlElement(name = "CST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "CST", required = true)
                         protected String cst;
-                        @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "qBCProd", required = true)
                         protected String qbcProd;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vAliqProd;
-                        @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vPIS", required = true)
                         protected String vpis;
 
                         /**
@@ -26949,17 +26843,15 @@ public class TNFe {
                 })
                 public static class PISST {
 
-                    @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vBC")
                     protected String vbc;
-                    @XmlElement(name = "pPIS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pPIS")
                     protected String ppis;
-                    @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "qBCProd")
                     protected String qbcProd;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vAliqProd;
-                    @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vPIS", required = true)
                     protected String vpis;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String indSomaPISST;
 
                     /**
@@ -27148,9 +27040,9 @@ public class TNFe {
             })
             public static class ImpostoDevol {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String pDevol;
-                @XmlElement(name = "IPI", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "IPI", required = true)
                 protected TNFe.InfNFe.Det.ImpostoDevol.IPI ipi;
 
                 /**
@@ -27227,7 +27119,7 @@ public class TNFe {
                 })
                 public static class IPI {
 
-                    @XmlElement(name = "vIPIDevol", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vIPIDevol", required = true)
                     protected String vipiDevol;
 
                     /**
@@ -27336,9 +27228,7 @@ public class TNFe {
             })
             public static class ObsItem {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.ObsItem.ObsCont obsCont;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.ObsItem.ObsFisco obsFisco;
 
                 /**
@@ -27430,7 +27320,7 @@ public class TNFe {
                 })
                 public static class ObsCont {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String xTexto;
                     @XmlAttribute(name = "xCampo", required = true)
                     protected String xCampo;
@@ -27526,7 +27416,7 @@ public class TNFe {
                 })
                 public static class ObsFisco {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String xTexto;
                     @XmlAttribute(name = "xCampo", required = true)
                     protected String xCampo;
@@ -27669,26 +27559,18 @@ public class TNFe {
              *             &lt;/restriction>
              *           &lt;/simpleType>
              *         &lt;/element>
-             *         &lt;element name="gCred" maxOccurs="4" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="cCredPresumido">
-             *                     &lt;simpleType>
-             *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-             *                         &lt;whiteSpace value="preserve"/>
-             *                         &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
-             *                       &lt;/restriction>
-             *                     &lt;/simpleType>
-             *                   &lt;/element>
-             *                   &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
-             *                   &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
-             *                 &lt;/sequence>
+             *         &lt;sequence maxOccurs="4" minOccurs="0">
+             *           &lt;element name="cCredPresumido">
+             *             &lt;simpleType>
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+             *                 &lt;whiteSpace value="preserve"/>
+             *                 &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
              *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
+             *             &lt;/simpleType>
+             *           &lt;/element>
+             *           &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
+             *           &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
+             *         &lt;/sequence>
              *         &lt;element name="EXTIPI" minOccurs="0">
              *           &lt;simpleType>
              *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -28435,7 +28317,7 @@ public class TNFe {
                 "indEscala",
                 "cnpjFab",
                 "cBenef",
-                "gCred",
+                "cCredPresumidoAndPCredPresumidoAndVCredPresumido",
                 "extipi",
                 "cfop",
                 "uCom",
@@ -28468,85 +28350,71 @@ public class TNFe {
             })
             public static class Prod {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String cProd;
-                @XmlElement(name = "cEAN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "cEAN", required = true)
                 protected String cean;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String cBarra;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String xProd;
-                @XmlElement(name = "NCM", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "NCM", required = true)
                 protected String ncm;
-                @XmlElement(name = "NVE", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "NVE")
                 protected List<String> nve;
-                @XmlElement(name = "CEST", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "CEST")
                 protected String cest;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String indEscala;
-                @XmlElement(name = "CNPJFab", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "CNPJFab")
                 protected String cnpjFab;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String cBenef;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
-                protected List<TNFe.InfNFe.Det.Prod.GCred> gCred;
-                @XmlElement(name = "EXTIPI", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElementRefs({
+                    @XmlElementRef(name = "pCredPresumido", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "vCredPresumido", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false),
+                    @XmlElementRef(name = "cCredPresumido", namespace = "http://www.portalfiscal.inf.br/nfe", type = JAXBElement.class, required = false)
+                })
+                protected List<JAXBElement<String>> cCredPresumidoAndPCredPresumidoAndVCredPresumido;
+                @XmlElement(name = "EXTIPI")
                 protected String extipi;
-                @XmlElement(name = "CFOP", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "CFOP", required = true)
                 protected String cfop;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String uCom;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String qCom;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vUnCom;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vProd;
-                @XmlElement(name = "cEANTrib", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "cEANTrib", required = true)
                 protected String ceanTrib;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String cBarraTrib;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String uTrib;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String qTrib;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vUnTrib;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vFrete;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vSeg;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vDesc;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vOutro;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String indTot;
-                @XmlElement(name = "DI", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "DI")
                 protected List<TNFe.InfNFe.Det.Prod.DI> di;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected List<TNFe.InfNFe.Det.Prod.DetExport> detExport;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String xPed;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String nItemPed;
-                @XmlElement(name = "nFCI", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "nFCI")
                 protected String nfci;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected List<TNFe.InfNFe.Det.Prod.Rastro> rastro;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.Prod.InfProdNFF infProdNFF;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.Prod.InfProdEmb infProdEmb;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.Prod.VeicProd veicProd;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.Prod.Med med;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected List<TNFe.InfNFe.Det.Prod.Arma> arma;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Det.Prod.Comb comb;
-                @XmlElement(name = "nRECOPI", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "nRECOPI")
                 protected String nrecopi;
 
                 /**
@@ -28795,32 +28663,34 @@ public class TNFe {
                 }
 
                 /**
-                 * Gets the value of the gCred property.
+                 * Gets the value of the cCredPresumidoAndPCredPresumidoAndVCredPresumido property.
                  * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
-                 * This is why there is not a <CODE>set</CODE> method for the gCred property.
+                 * This is why there is not a <CODE>set</CODE> method for the cCredPresumidoAndPCredPresumidoAndVCredPresumido property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
-                 *    getGCred().add(newItem);
+                 *    getCCredPresumidoAndPCredPresumidoAndVCredPresumido().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
-                 * {@link TNFe.InfNFe.Det.Prod.GCred }
+                 * {@link JAXBElement }{@code <}{@link String }{@code >}
+                 * {@link JAXBElement }{@code <}{@link String }{@code >}
+                 * {@link JAXBElement }{@code <}{@link String }{@code >}
                  * 
                  * 
                  */
-                public List<TNFe.InfNFe.Det.Prod.GCred> getGCred() {
-                    if (gCred == null) {
-                        gCred = new ArrayList<TNFe.InfNFe.Det.Prod.GCred>();
+                public List<JAXBElement<String>> getCCredPresumidoAndPCredPresumidoAndVCredPresumido() {
+                    if (cCredPresumidoAndPCredPresumidoAndVCredPresumido == null) {
+                        cCredPresumidoAndPCredPresumidoAndVCredPresumido = new ArrayList<JAXBElement<String>>();
                     }
-                    return this.gCred;
+                    return this.cCredPresumidoAndPCredPresumidoAndVCredPresumido;
                 }
 
                 /**
@@ -29600,13 +29470,13 @@ public class TNFe {
                 })
                 public static class Arma {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpArma;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nSerie;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nCano;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String descr;
 
                     /**
@@ -29845,32 +29715,27 @@ public class TNFe {
                 })
                 public static class Comb {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cProdANP;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String descANP;
-                    @XmlElement(name = "pGLP", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pGLP")
                     protected String pglp;
-                    @XmlElement(name = "pGNn", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pGNn")
                     protected String pgNn;
-                    @XmlElement(name = "pGNi", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "pGNi")
                     protected String pgNi;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String vPart;
-                    @XmlElement(name = "CODIF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CODIF")
                     protected String codif;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String qTemp;
-                    @XmlElement(name = "UFCons", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "UFCons", required = true)
                     @XmlSchemaType(name = "string")
                     protected TUf ufCons;
-                    @XmlElement(name = "CIDE", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CIDE")
                     protected TNFe.InfNFe.Det.Prod.Comb.CIDE cide;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected TNFe.InfNFe.Det.Prod.Comb.Encerrante encerrante;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String pBio;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected List<TNFe.InfNFe.Det.Prod.Comb.OrigComb> origComb;
 
                     /**
@@ -30220,11 +30085,11 @@ public class TNFe {
                     })
                     public static class CIDE {
 
-                        @XmlElement(name = "qBCProd", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "qBCProd", required = true)
                         protected String qbcProd;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vAliqProd;
-                        @XmlElement(name = "vCIDE", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "vCIDE", required = true)
                         protected String vcide;
 
                         /**
@@ -30356,15 +30221,14 @@ public class TNFe {
                     })
                     public static class Encerrante {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String nBico;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String nBomba;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String nTanque;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vEncIni;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String vEncFin;
 
                         /**
@@ -30527,11 +30391,11 @@ public class TNFe {
                     })
                     public static class OrigComb {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String indImport;
-                        @XmlElement(name = "cUFOrig", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "cUFOrig", required = true)
                         protected String cufOrig;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String pOrig;
 
                         /**
@@ -30753,33 +30617,33 @@ public class TNFe {
                 })
                 public static class DI {
 
-                    @XmlElement(name = "nDI", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "nDI", required = true)
                     protected String ndi;
-                    @XmlElement(name = "dDI", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "dDI", required = true)
                     protected String ddi;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String xLocDesemb;
-                    @XmlElement(name = "UFDesemb", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "UFDesemb", required = true)
                     @XmlSchemaType(name = "string")
                     protected TUfEmi ufDesemb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String dDesemb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpViaTransp;
-                    @XmlElement(name = "vAFRMM", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "vAFRMM")
                     protected String vafrmm;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpIntermedio;
-                    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CNPJ")
                     protected String cnpj;
-                    @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CPF")
                     protected String cpf;
-                    @XmlElement(name = "UFTerceiro", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "UFTerceiro")
                     @XmlSchemaType(name = "string")
                     protected TUfEmi ufTerceiro;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cExportador;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected List<TNFe.InfNFe.Det.Prod.DI.Adi> adi;
 
                     /**
@@ -31161,15 +31025,12 @@ public class TNFe {
                     })
                     public static class Adi {
 
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String nAdicao;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String nSeqAdic;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String cFabricante;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String vDescDI;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                         protected String nDraw;
 
                         /**
@@ -31350,9 +31211,7 @@ public class TNFe {
                 })
                 public static class DetExport {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String nDraw;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected TNFe.InfNFe.Det.Prod.DetExport.ExportInd exportInd;
 
                     /**
@@ -31440,11 +31299,11 @@ public class TNFe {
                     })
                     public static class ExportInd {
 
-                        @XmlElement(name = "nRE", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(name = "nRE", required = true)
                         protected String nre;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String chNFe;
-                        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                        @XmlElement(required = true)
                         protected String qExport;
 
                         /**
@@ -31534,124 +31393,6 @@ public class TNFe {
                  *   &lt;complexContent>
                  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
                  *       &lt;sequence>
-                 *         &lt;element name="cCredPresumido">
-                 *           &lt;simpleType>
-                 *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-                 *               &lt;whiteSpace value="preserve"/>
-                 *               &lt;pattern value="[!-ÿ]{8}|[!-ÿ]{10}"/>
-                 *             &lt;/restriction>
-                 *           &lt;/simpleType>
-                 *         &lt;/element>
-                 *         &lt;element name="pCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_0302a04"/>
-                 *         &lt;element name="vCredPresumido" type="{http://www.portalfiscal.inf.br/nfe}TDec_1302"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
-                 * 
-                 * 
-                 */
-                @XmlAccessorType(XmlAccessType.FIELD)
-                @XmlType(name = "", propOrder = {
-                    "cCredPresumido",
-                    "pCredPresumido",
-                    "vCredPresumido"
-                })
-                public static class GCred {
-
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
-                    protected String cCredPresumido;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
-                    protected String pCredPresumido;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
-                    protected String vCredPresumido;
-
-                    /**
-                     * Obtém o valor da propriedade cCredPresumido.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
-                     */
-                    public String getCCredPresumido() {
-                        return cCredPresumido;
-                    }
-
-                    /**
-                     * Define o valor da propriedade cCredPresumido.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
-                     */
-                    public void setCCredPresumido(String value) {
-                        this.cCredPresumido = value;
-                    }
-
-                    /**
-                     * Obtém o valor da propriedade pCredPresumido.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
-                     */
-                    public String getPCredPresumido() {
-                        return pCredPresumido;
-                    }
-
-                    /**
-                     * Define o valor da propriedade pCredPresumido.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
-                     */
-                    public void setPCredPresumido(String value) {
-                        this.pCredPresumido = value;
-                    }
-
-                    /**
-                     * Obtém o valor da propriedade vCredPresumido.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
-                     */
-                    public String getVCredPresumido() {
-                        return vCredPresumido;
-                    }
-
-                    /**
-                     * Define o valor da propriedade vCredPresumido.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
-                     */
-                    public void setVCredPresumido(String value) {
-                        this.vCredPresumido = value;
-                    }
-
-                }
-
-
-                /**
-                 * <p>Classe Java de anonymous complex type.
-                 * 
-                 * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
-                 * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
                  *         &lt;element name="xEmb">
                  *           &lt;simpleType>
                  *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
@@ -31685,11 +31426,11 @@ public class TNFe {
                 })
                 public static class InfProdEmb {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String xEmb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String qVolEmb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String uEmb;
 
                     /**
@@ -31807,9 +31548,9 @@ public class TNFe {
                 })
                 public static class InfProdNFF {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cProdFisco;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cOperNFF;
 
                     /**
@@ -31905,11 +31646,10 @@ public class TNFe {
                 })
                 public static class Med {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cProdANVISA;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String xMotivoIsencao;
-                    @XmlElement(name = "vPMC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "vPMC", required = true)
                     protected String vpmc;
 
                     /**
@@ -32034,15 +31774,14 @@ public class TNFe {
                 })
                 public static class Rastro {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nLote;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String qLote;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String dFab;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String dVal;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String cAgreg;
 
                     /**
@@ -32422,53 +32161,53 @@ public class TNFe {
                 })
                 public static class VeicProd {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpOp;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String chassi;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cCor;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String xCor;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String pot;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cilin;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String pesoL;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String pesoB;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nSerie;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpComb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nMotor;
-                    @XmlElement(name = "CMT", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "CMT", required = true)
                     protected String cmt;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String dist;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String anoMod;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String anoFab;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpPint;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpVeic;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String espVeic;
-                    @XmlElement(name = "VIN", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "VIN", required = true)
                     protected String vin;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String condVeic;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cMod;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String cCorDENATRAN;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String lota;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpRest;
 
                     /**
@@ -33138,25 +32877,24 @@ public class TNFe {
         })
         public static class Emit {
 
-            @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CNPJ")
             protected String cnpj;
-            @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CPF")
             protected String cpf;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String xNome;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xFant;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected TEnderEmi enderEmit;
-            @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "IE", required = true)
             protected String ie;
-            @XmlElement(name = "IEST", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "IEST")
             protected String iest;
-            @XmlElement(name = "IM", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "IM")
             protected String im;
-            @XmlElement(name = "CNAE", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "CNAE")
             protected String cnae;
-            @XmlElement(name = "CRT", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "CRT", required = true)
             protected String crt;
 
             /**
@@ -33445,12 +33183,11 @@ public class TNFe {
         })
         public static class Exporta {
 
-            @XmlElement(name = "UFSaidaPais", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "UFSaidaPais", required = true)
             @XmlSchemaType(name = "string")
             protected TUfEmi ufSaidaPais;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String xLocExporta;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xLocDespacho;
 
             /**
@@ -33822,53 +33559,49 @@ public class TNFe {
         })
         public static class Ide {
 
-            @XmlElement(name = "cUF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "cUF", required = true)
             protected String cuf;
-            @XmlElement(name = "cNF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "cNF", required = true)
             protected String cnf;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String natOp;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String mod;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String serie;
-            @XmlElement(name = "nNF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "nNF", required = true)
             protected String nnf;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String dhEmi;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String dhSaiEnt;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String tpNF;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String idDest;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String cMunFG;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String tpImp;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String tpEmis;
-            @XmlElement(name = "cDV", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "cDV", required = true)
             protected String cdv;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String tpAmb;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String finNFe;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String indFinal;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String indPres;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String indIntermed;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String procEmi;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String verProc;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String dhCont;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String xJust;
-            @XmlElement(name = "NFref", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "NFref")
             protected List<TNFe.InfNFe.Ide.NFref> nFref;
 
             /**
@@ -34587,17 +34320,11 @@ public class TNFe {
             })
             public static class NFref {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String refNFe;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String refNFeSig;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Ide.NFref.RefNF refNF;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Ide.NFref.RefNFP refNFP;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String refCTe;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Ide.NFref.RefECF refECF;
 
                 /**
@@ -34797,11 +34524,11 @@ public class TNFe {
                 })
                 public static class RefECF {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String mod;
-                    @XmlElement(name = "nECF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "nECF", required = true)
                     protected String necf;
-                    @XmlElement(name = "nCOO", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "nCOO", required = true)
                     protected String ncoo;
 
                     /**
@@ -34929,17 +34656,17 @@ public class TNFe {
                 })
                 public static class RefNF {
 
-                    @XmlElement(name = "cUF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "cUF", required = true)
                     protected String cuf;
-                    @XmlElement(name = "AAMM", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "AAMM", required = true)
                     protected String aamm;
-                    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "CNPJ", required = true)
                     protected String cnpj;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String mod;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String serie;
-                    @XmlElement(name = "nNF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "nNF", required = true)
                     protected String nnf;
 
                     /**
@@ -35145,21 +34872,21 @@ public class TNFe {
                 })
                 public static class RefNFP {
 
-                    @XmlElement(name = "cUF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "cUF", required = true)
                     protected String cuf;
-                    @XmlElement(name = "AAMM", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "AAMM", required = true)
                     protected String aamm;
-                    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CNPJ")
                     protected String cnpj;
-                    @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CPF")
                     protected String cpf;
-                    @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "IE", required = true)
                     protected String ie;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String mod;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String serie;
-                    @XmlElement(name = "nNF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(name = "nNF", required = true)
                     protected String nnf;
 
                     /**
@@ -35500,15 +35227,10 @@ public class TNFe {
         })
         public static class InfAdic {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String infAdFisco;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String infCpl;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.InfAdic.ObsCont> obsCont;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.InfAdic.ObsFisco> obsFisco;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.InfAdic.ProcRef> procRef;
 
             /**
@@ -35687,7 +35409,7 @@ public class TNFe {
             })
             public static class ObsCont {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String xTexto;
                 @XmlAttribute(name = "xCampo", required = true)
                 protected String xCampo;
@@ -35783,7 +35505,7 @@ public class TNFe {
             })
             public static class ObsFisco {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String xTexto;
                 @XmlAttribute(name = "xCampo", required = true)
                 protected String xCampo;
@@ -35898,11 +35620,10 @@ public class TNFe {
             })
             public static class ProcRef {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String nProc;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String indProc;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String tpAto;
 
                 /**
@@ -36016,9 +35737,9 @@ public class TNFe {
         })
         public static class InfIntermed {
 
-            @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "CNPJ", required = true)
             protected String cnpj;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String idCadIntTran;
 
             /**
@@ -36104,7 +35825,7 @@ public class TNFe {
         })
         public static class InfSolicNFF {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String xSolic;
 
             /**
@@ -36246,9 +35967,8 @@ public class TNFe {
         })
         public static class Pag {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected List<TNFe.InfNFe.Pag.DetPag> detPag;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String vTroco;
 
             /**
@@ -36412,22 +36132,18 @@ public class TNFe {
             })
             public static class DetPag {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String indPag;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String tPag;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String xPag;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vPag;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String dPag;
-                @XmlElement(name = "CNPJPag", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "CNPJPag")
                 protected String cnpjPag;
-                @XmlElement(name = "UFPag", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "UFPag")
                 @XmlSchemaType(name = "string")
                 protected TUfEmi ufPag;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected TNFe.InfNFe.Pag.DetPag.Card card;
 
                 /**
@@ -36687,17 +36403,14 @@ public class TNFe {
                 })
                 public static class Card {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String tpIntegra;
-                    @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CNPJ")
                     protected String cnpj;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String tBand;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String cAut;
-                    @XmlElement(name = "CNPJReceb", namespace = "http://www.portalfiscal.inf.br/nfe")
+                    @XmlElement(name = "CNPJReceb")
                     protected String cnpjReceb;
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                     protected String idTermPag;
 
                     /**
@@ -36967,11 +36680,10 @@ public class TNFe {
         })
         public static class Total {
 
-            @XmlElement(name = "ICMSTot", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(name = "ICMSTot", required = true)
             protected TNFe.InfNFe.Total.ICMSTot icmsTot;
-            @XmlElement(name = "ISSQNtot", namespace = "http://www.portalfiscal.inf.br/nfe")
+            @XmlElement(name = "ISSQNtot")
             protected TNFe.InfNFe.Total.ISSQNtot issqNtot;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Total.RetTrib retTrib;
 
             /**
@@ -37128,63 +36840,62 @@ public class TNFe {
             })
             public static class ICMSTot {
 
-                @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vBC", required = true)
                 protected String vbc;
-                @XmlElement(name = "vICMS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vICMS", required = true)
                 protected String vicms;
-                @XmlElement(name = "vICMSDeson", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vICMSDeson", required = true)
                 protected String vicmsDeson;
-                @XmlElement(name = "vFCPUFDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vFCPUFDest")
                 protected String vfcpufDest;
-                @XmlElement(name = "vICMSUFDest", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vICMSUFDest")
                 protected String vicmsufDest;
-                @XmlElement(name = "vICMSUFRemet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vICMSUFRemet")
                 protected String vicmsufRemet;
-                @XmlElement(name = "vFCP", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vFCP", required = true)
                 protected String vfcp;
-                @XmlElement(name = "vBCST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vBCST", required = true)
                 protected String vbcst;
-                @XmlElement(name = "vST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vST", required = true)
                 protected String vst;
-                @XmlElement(name = "vFCPST", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vFCPST", required = true)
                 protected String vfcpst;
-                @XmlElement(name = "vFCPSTRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vFCPSTRet", required = true)
                 protected String vfcpstRet;
-                @XmlElement(name = "qBCMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "qBCMono")
                 protected String qbcMono;
-                @XmlElement(name = "vICMSMono", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vICMSMono")
                 protected String vicmsMono;
-                @XmlElement(name = "qBCMonoReten", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "qBCMonoReten")
                 protected String qbcMonoReten;
-                @XmlElement(name = "vICMSMonoReten", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vICMSMonoReten")
                 protected String vicmsMonoReten;
-                @XmlElement(name = "qBCMonoRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "qBCMonoRet")
                 protected String qbcMonoRet;
-                @XmlElement(name = "vICMSMonoRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vICMSMonoRet")
                 protected String vicmsMonoRet;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vProd;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vFrete;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vSeg;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vDesc;
-                @XmlElement(name = "vII", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vII", required = true)
                 protected String vii;
-                @XmlElement(name = "vIPI", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vIPI", required = true)
                 protected String vipi;
-                @XmlElement(name = "vIPIDevol", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vIPIDevol", required = true)
                 protected String vipiDevol;
-                @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vPIS", required = true)
                 protected String vpis;
-                @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vCOFINS", required = true)
                 protected String vcofins;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vOutro;
-                @XmlElement(name = "vNF", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vNF", required = true)
                 protected String vnf;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vTotTrib;
 
                 /**
@@ -37945,29 +37656,23 @@ public class TNFe {
             })
             public static class ISSQNtot {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vServ;
-                @XmlElement(name = "vBC", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vBC")
                 protected String vbc;
-                @XmlElement(name = "vISS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vISS")
                 protected String viss;
-                @XmlElement(name = "vPIS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vPIS")
                 protected String vpis;
-                @XmlElement(name = "vCOFINS", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vCOFINS")
                 protected String vcofins;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String dCompet;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vDeducao;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vOutro;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vDescIncond;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vDescCond;
-                @XmlElement(name = "vISSRet", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vISSRet")
                 protected String vissRet;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String cRegTrib;
 
                 /**
@@ -38298,19 +38003,15 @@ public class TNFe {
             })
             public static class RetTrib {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vRetPIS;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vRetCOFINS;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vRetCSLL;
-                @XmlElement(name = "vBCIRRF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vBCIRRF")
                 protected String vbcirrf;
-                @XmlElement(name = "vIRRF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vIRRF")
                 protected String virrf;
-                @XmlElement(name = "vBCRetPrev", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "vBCRetPrev")
                 protected String vbcRetPrev;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String vRetPrev;
 
                 /**
@@ -38677,21 +38378,14 @@ public class TNFe {
         })
         public static class Transp {
 
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+            @XmlElement(required = true)
             protected String modFrete;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Transp.Transporta transporta;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TNFe.InfNFe.Transp.RetTransp retTransp;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected TVeiculo veicTransp;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TVeiculo> reboque;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String vagao;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected String balsa;
-            @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
             protected List<TNFe.InfNFe.Transp.Vol> vol;
 
             /**
@@ -38939,17 +38633,17 @@ public class TNFe {
             })
             public static class RetTransp {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String vServ;
-                @XmlElement(name = "vBCRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vBCRet", required = true)
                 protected String vbcRet;
-                @XmlElement(name = "pICMSRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "pICMSRet", required = true)
                 protected String picmsRet;
-                @XmlElement(name = "vICMSRet", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "vICMSRet", required = true)
                 protected String vicmsRet;
-                @XmlElement(name = "CFOP", namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(name = "CFOP", required = true)
                 protected String cfop;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                @XmlElement(required = true)
                 protected String cMunFG;
 
                 /**
@@ -39159,19 +38853,16 @@ public class TNFe {
             })
             public static class Transporta {
 
-                @XmlElement(name = "CNPJ", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "CNPJ")
                 protected String cnpj;
-                @XmlElement(name = "CPF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "CPF")
                 protected String cpf;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String xNome;
-                @XmlElement(name = "IE", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "IE")
                 protected String ie;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String xEnder;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String xMun;
-                @XmlElement(name = "UF", namespace = "http://www.portalfiscal.inf.br/nfe")
+                @XmlElement(name = "UF")
                 @XmlSchemaType(name = "string")
                 protected TUf uf;
 
@@ -39428,19 +39119,12 @@ public class TNFe {
             })
             public static class Vol {
 
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String qVol;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String esp;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String marca;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String nVol;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String pesoL;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected String pesoB;
-                @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe")
                 protected List<TNFe.InfNFe.Transp.Vol.Lacres> lacres;
 
                 /**
@@ -39649,7 +39333,7 @@ public class TNFe {
                 })
                 public static class Lacres {
 
-                    @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+                    @XmlElement(required = true)
                     protected String nLacre;
 
                     /**
@@ -39728,9 +39412,9 @@ public class TNFe {
     })
     public static class InfNFeSupl {
 
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected String qrCode;
-        @XmlElement(namespace = "http://www.portalfiscal.inf.br/nfe", required = true)
+        @XmlElement(required = true)
         protected String urlChave;
 
         /**

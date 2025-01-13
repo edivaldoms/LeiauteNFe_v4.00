@@ -1,5 +1,12 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.03.05 às 08:31:21 PM BRT 
+//
 
-package br.inf.portalfiscal.nfe.v400;
+
+package br.inf.portalfiscal.nfe;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,17 +16,29 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Dados do Endereço do Emitente  // 24/10/08 - desmembrado / tamanho mínimo
+ * Tipo Dados do Local de Retirada ou Entrega // 24/10/08 - tamanho mínimo // v2.0
  * 
- * <p>Classe Java de TEnderEmi complex type.
+ * <p>Classe Java de TLocal complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="TEnderEmi">
+ * &lt;complexType name="TLocal">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;choice>
+ *           &lt;element name="CNPJ" type="{http://www.portalfiscal.inf.br/nfe}TCnpjOpc"/>
+ *           &lt;element name="CPF" type="{http://www.portalfiscal.inf.br/nfe}TCpf"/>
+ *         &lt;/choice>
+ *         &lt;element name="xNome" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
+ *               &lt;maxLength value="60"/>
+ *               &lt;minLength value="2"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *         &lt;element name="xLgr">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
@@ -61,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUfEmi"/>
- *         &lt;element name="CEP">
+ *         &lt;element name="UF" type="{http://www.portalfiscal.inf.br/nfe}TUf"/>
+ *         &lt;element name="CEP" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *               &lt;whiteSpace value="preserve"/>
@@ -72,16 +91,17 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;/element>
  *         &lt;element name="cPais" minOccurs="0">
  *           &lt;simpleType>
- *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *               &lt;enumeration value="1058"/>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;whiteSpace value="preserve"/>
+ *               &lt;pattern value="[0-9]{1,4}"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="xPais" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *               &lt;enumeration value="Brasil"/>
- *               &lt;enumeration value="BRASIL"/>
+ *               &lt;maxLength value="60"/>
+ *               &lt;minLength value="2"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
@@ -93,6 +113,16 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
+ *         &lt;element name="email" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
+ *               &lt;whiteSpace value="preserve"/>
+ *               &lt;minLength value="1"/>
+ *               &lt;maxLength value="60"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="IE" type="{http://www.portalfiscal.inf.br/nfe}TIe" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -102,7 +132,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TEnderEmi", propOrder = {
+@XmlType(name = "TLocal", propOrder = {
+    "cnpj",
+    "cpf",
+    "xNome",
     "xLgr",
     "nro",
     "xCpl",
@@ -113,10 +146,17 @@ import javax.xml.bind.annotation.XmlType;
     "cep",
     "cPais",
     "xPais",
-    "fone"
+    "fone",
+    "email",
+    "ie"
 })
-public class TEnderEmi {
+public class TLocal {
 
+    @XmlElement(name = "CNPJ")
+    protected String cnpj;
+    @XmlElement(name = "CPF")
+    protected String cpf;
+    protected String xNome;
     @XmlElement(required = true)
     protected String xLgr;
     @XmlElement(required = true)
@@ -130,12 +170,87 @@ public class TEnderEmi {
     protected String xMun;
     @XmlElement(name = "UF", required = true)
     @XmlSchemaType(name = "string")
-    protected TUfEmi uf;
-    @XmlElement(name = "CEP", required = true)
+    protected TUf uf;
+    @XmlElement(name = "CEP")
     protected String cep;
     protected String cPais;
     protected String xPais;
     protected String fone;
+    protected String email;
+    @XmlElement(name = "IE")
+    protected String ie;
+
+    /**
+     * Obtém o valor da propriedade cnpj.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCNPJ() {
+        return cnpj;
+    }
+
+    /**
+     * Define o valor da propriedade cnpj.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCNPJ(String value) {
+        this.cnpj = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade cpf.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCPF() {
+        return cpf;
+    }
+
+    /**
+     * Define o valor da propriedade cpf.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCPF(String value) {
+        this.cpf = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade xNome.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getXNome() {
+        return xNome;
+    }
+
+    /**
+     * Define o valor da propriedade xNome.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setXNome(String value) {
+        this.xNome = value;
+    }
 
     /**
      * Obtém o valor da propriedade xLgr.
@@ -286,10 +401,10 @@ public class TEnderEmi {
      * 
      * @return
      *     possible object is
-     *     {@link TUfEmi }
+     *     {@link TUf }
      *     
      */
-    public TUfEmi getUF() {
+    public TUf getUF() {
         return uf;
     }
 
@@ -298,10 +413,10 @@ public class TEnderEmi {
      * 
      * @param value
      *     allowed object is
-     *     {@link TUfEmi }
+     *     {@link TUf }
      *     
      */
-    public void setUF(TUfEmi value) {
+    public void setUF(TUf value) {
         this.uf = value;
     }
 
@@ -399,6 +514,54 @@ public class TEnderEmi {
      */
     public void setFone(String value) {
         this.fone = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade email.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Define o valor da propriedade email.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmail(String value) {
+        this.email = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade ie.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIE() {
+        return ie;
+    }
+
+    /**
+     * Define o valor da propriedade ie.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIE(String value) {
+        this.ie = value;
     }
 
 }

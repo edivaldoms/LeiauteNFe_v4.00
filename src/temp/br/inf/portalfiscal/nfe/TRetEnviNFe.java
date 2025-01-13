@@ -1,8 +1,13 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2024.03.05 às 08:31:21 PM BRT 
+//
 
-package br.inf.portalfiscal.nfe.v400;
 
-import java.util.ArrayList;
-import java.util.List;
+package br.inf.portalfiscal.nfe;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -11,43 +16,38 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Retorno do Pedido de  Consulta do Recido do Lote de Notas Fiscais Eletrônicas
+ * Tipo Retorno do Pedido de Autorização da Nota Fiscal Eletrônica
  * 
- * <p>Classe Java de TRetConsReciNFe complex type.
+ * <p>Classe Java de TRetEnviNFe complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="TRetConsReciNFe">
+ * &lt;complexType name="TRetEnviNFe">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="tpAmb" type="{http://www.portalfiscal.inf.br/nfe}TAmb"/>
  *         &lt;element name="verAplic" type="{http://www.portalfiscal.inf.br/nfe}TVerAplic"/>
- *         &lt;element name="nRec" type="{http://www.portalfiscal.inf.br/nfe}TRec"/>
  *         &lt;element name="cStat" type="{http://www.portalfiscal.inf.br/nfe}TStat"/>
  *         &lt;element name="xMotivo" type="{http://www.portalfiscal.inf.br/nfe}TMotivo"/>
  *         &lt;element name="cUF" type="{http://www.portalfiscal.inf.br/nfe}TCodUfIBGE"/>
  *         &lt;element name="dhRecbto" type="{http://www.portalfiscal.inf.br/nfe}TDateTimeUTC"/>
- *         &lt;sequence minOccurs="0">
- *           &lt;element name="cMsg">
- *             &lt;simpleType>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                 &lt;whiteSpace value="preserve"/>
- *                 &lt;pattern value="[0-9]{1,4}"/>
- *               &lt;/restriction>
- *             &lt;/simpleType>
+ *         &lt;choice>
+ *           &lt;element name="infRec" minOccurs="0">
+ *             &lt;complexType>
+ *               &lt;complexContent>
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                   &lt;sequence>
+ *                     &lt;element name="nRec" type="{http://www.portalfiscal.inf.br/nfe}TRec"/>
+ *                     &lt;element name="tMed" type="{http://www.portalfiscal.inf.br/nfe}TMed"/>
+ *                   &lt;/sequence>
+ *                 &lt;/restriction>
+ *               &lt;/complexContent>
+ *             &lt;/complexType>
  *           &lt;/element>
- *           &lt;element name="xMsg">
- *             &lt;simpleType>
- *               &lt;restriction base="{http://www.portalfiscal.inf.br/nfe}TString">
- *                 &lt;minLength value="1"/>
- *                 &lt;maxLength value="200"/>
- *               &lt;/restriction>
- *             &lt;/simpleType>
- *           &lt;/element>
- *         &lt;/sequence>
- *         &lt;element name="protNFe" type="{http://www.portalfiscal.inf.br/nfe}TProtNFe" maxOccurs="50" minOccurs="0"/>
+ *           &lt;element name="protNFe" type="{http://www.portalfiscal.inf.br/nfe}TProtNFe" minOccurs="0"/>
+ *         &lt;/choice>
  *       &lt;/sequence>
  *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/nfe}TVerNFe" />
  *     &lt;/restriction>
@@ -58,26 +58,22 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TRetConsReciNFe", propOrder = {
+@XmlType(name = "TRetEnviNFe", propOrder = {
     "tpAmb",
     "verAplic",
-    "nRec",
     "cStat",
     "xMotivo",
     "cuf",
     "dhRecbto",
-    "cMsg",
-    "xMsg",
+    "infRec",
     "protNFe"
 })
-public class TRetConsReciNFe {
+public class TRetEnviNFe {
 
     @XmlElement(required = true)
     protected String tpAmb;
     @XmlElement(required = true)
     protected String verAplic;
-    @XmlElement(required = true)
-    protected String nRec;
     @XmlElement(required = true)
     protected String cStat;
     @XmlElement(required = true)
@@ -86,9 +82,8 @@ public class TRetConsReciNFe {
     protected String cuf;
     @XmlElement(required = true)
     protected String dhRecbto;
-    protected String cMsg;
-    protected String xMsg;
-    protected List<TProtNFe> protNFe;
+    protected TRetEnviNFe.InfRec infRec;
+    protected TProtNFe protNFe;
     @XmlAttribute(name = "versao", required = true)
     protected String versao;
 
@@ -138,30 +133,6 @@ public class TRetConsReciNFe {
      */
     public void setVerAplic(String value) {
         this.verAplic = value;
-    }
-
-    /**
-     * Obtém o valor da propriedade nRec.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNRec() {
-        return nRec;
-    }
-
-    /**
-     * Define o valor da propriedade nRec.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setNRec(String value) {
-        this.nRec = value;
     }
 
     /**
@@ -261,80 +232,51 @@ public class TRetConsReciNFe {
     }
 
     /**
-     * Obtém o valor da propriedade cMsg.
+     * Obtém o valor da propriedade infRec.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TRetEnviNFe.InfRec }
      *     
      */
-    public String getCMsg() {
-        return cMsg;
+    public TRetEnviNFe.InfRec getInfRec() {
+        return infRec;
     }
 
     /**
-     * Define o valor da propriedade cMsg.
+     * Define o valor da propriedade infRec.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TRetEnviNFe.InfRec }
      *     
      */
-    public void setCMsg(String value) {
-        this.cMsg = value;
+    public void setInfRec(TRetEnviNFe.InfRec value) {
+        this.infRec = value;
     }
 
     /**
-     * Obtém o valor da propriedade xMsg.
+     * Obtém o valor da propriedade protNFe.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TProtNFe }
      *     
      */
-    public String getXMsg() {
-        return xMsg;
+    public TProtNFe getProtNFe() {
+        return protNFe;
     }
 
     /**
-     * Define o valor da propriedade xMsg.
+     * Define o valor da propriedade protNFe.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TProtNFe }
      *     
      */
-    public void setXMsg(String value) {
-        this.xMsg = value;
-    }
-
-    /**
-     * Gets the value of the protNFe property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the protNFe property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getProtNFe().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link TProtNFe }
-     * 
-     * 
-     */
-    public List<TProtNFe> getProtNFe() {
-        if (protNFe == null) {
-            protNFe = new ArrayList<TProtNFe>();
-        }
-        return this.protNFe;
+    public void setProtNFe(TProtNFe value) {
+        this.protNFe = value;
     }
 
     /**
@@ -359,6 +301,89 @@ public class TRetConsReciNFe {
      */
     public void setVersao(String value) {
         this.versao = value;
+    }
+
+
+    /**
+     * <p>Classe Java de anonymous complex type.
+     * 
+     * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="nRec" type="{http://www.portalfiscal.inf.br/nfe}TRec"/>
+     *         &lt;element name="tMed" type="{http://www.portalfiscal.inf.br/nfe}TMed"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "nRec",
+        "tMed"
+    })
+    public static class InfRec {
+
+        @XmlElement(required = true)
+        protected String nRec;
+        @XmlElement(required = true)
+        protected String tMed;
+
+        /**
+         * Obtém o valor da propriedade nRec.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getNRec() {
+            return nRec;
+        }
+
+        /**
+         * Define o valor da propriedade nRec.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setNRec(String value) {
+            this.nRec = value;
+        }
+
+        /**
+         * Obtém o valor da propriedade tMed.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getTMed() {
+            return tMed;
+        }
+
+        /**
+         * Define o valor da propriedade tMed.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setTMed(String value) {
+            this.tMed = value;
+        }
+
     }
 
 }
